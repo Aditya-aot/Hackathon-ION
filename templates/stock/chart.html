@@ -1,0 +1,173 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+
+<br>
+        <form action="" method="post">{% csrf_token %}
+            {{form}} 
+           <button class="btn btn-primary"  ><span>Submit </span></button>
+        </form>
+
+<br>
+
+
+
+<script>
+var endpoint = '/chart/'
+
+$.ajax({
+    method: "GET"
+    url: endpoint
+    success: function(data) {
+        console.log(data)
+    }
+})
+
+</script>
+
+
+
+
+<canvas id="myChart" width="500" height="280"></canvas>
+<script>
+
+var toplabel = JSON.parse("{{lab|escapejs}}");
+var close_data = JSON.parse("{{close|escapejs}}");
+var high_data = JSON.parse("{{high|escapejs}}");
+var low_data = JSON.parse("{{low|escapejs}}");
+var open_data = JSON.parse("{{open|escapejs}}");
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    
+    data: {
+        labels: toplabel,
+        datasets: [ {
+            label: 'CLOSE',
+            data: close_data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+           ],
+            borderColor: [
+                'rgba(255, 0, 0, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+
+
+                
+            ],
+            borderWidth: 4
+
+        } ,
+        {
+            label: 'HIGH',
+            data: high_data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(0, 0, 255, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+
+
+                
+            ],
+            borderWidth: 4
+
+        } , 
+
+        {
+            label: 'LOW',
+            data: low_data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+           ],
+            borderColor: [
+                'rgba(60, 179, 113, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+
+
+                
+            ],
+            borderWidth: 4
+
+        } ,
+
+        {
+            label: 'OPEN',
+            data: open_data,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ], 
+            borderColor: [
+                'rgba(255, 165, 0, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+
+
+                
+            ],
+            borderWidth: 4
+
+        } ,
+
+        ]
+    },
+    
+
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+
+
+ {% endblock content %}
+
