@@ -1,0 +1,69 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+
+
+
+
+<div class="container nav-wrapper">
+
+
+
+    <hr>
+    <h1>Login ...</h1>
+
+
+<hr>
+
+
+    <div class="box2">
+	<form action="/account/login/" method="post">
+     {% csrf_token %}
+		<span class="text-center">login</span>
+        <div class="input-container">		
+		<input type="text" name="username" required=""/>
+		<label>UserName</label>
+	</div>
+     <div class="input-container">		
+		<input type="password" name="password" required=""/>
+		<label>Password</label>
+	</div>
+    <input type="submit" class="btnn">
+    </form>	
+    </div>
+
+
+
+       <div>
+           {% for message in messages %}
+           <h3> {{message}} </h3>
+           {% endfor %}
+       </div>
+    <hr>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock content %}
