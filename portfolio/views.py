@@ -99,7 +99,6 @@ def update_portfolio(request, pk) :
 # <-------------- Crypto Portfolio code here ------------->
 # <-------------- Crypto Portfolio code here ------------->
 # <-------------- Crypto Portfolio code here ------------->
-# 
 def crypto_portfolio_views(request) :
 
     stock_dict={}

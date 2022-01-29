@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path , include 
 from stock import views
 from portfolio import views
+from guide import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('stock.urls')) ,
     path('portfolio', include('portfolio.urls')) ,
+    path('guide', include('guide.urls')) ,
 ]
