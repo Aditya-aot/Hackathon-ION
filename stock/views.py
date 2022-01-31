@@ -245,3 +245,6 @@ def news(request) :
     context={'y_news':y_news}
     return render(request, 'stock/news.html',context) 
 
+def predict_view(request) :
+    context = { }
+    return render(request, 'stock/predict.html',context) 
