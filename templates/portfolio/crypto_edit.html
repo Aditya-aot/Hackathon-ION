@@ -14,6 +14,10 @@
 
 <h1>Crypto PortFolio Edit</h1>
 
+<form action="/portfolio" method='post' >{% csrf_token %}
+  <input type="submit" value="Stock Portfolio" >
+</form>
+
 
 <form action="/portfolio/crypto/portfolio" method='post' >{% csrf_token %}
     <input type="submit" value="--BACK" >
