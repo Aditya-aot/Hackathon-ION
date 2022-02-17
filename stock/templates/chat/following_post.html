@@ -1,0 +1,50 @@
+{% extends 'chat/base.html'%}
+{% block content %}
+
+
+<hr>
+<div class="container nav-wrapper">
+<ol>
+
+    <div class="alert alert-primary" role="alert">
+  {{pk}}'s Page
+</div>
+
+        <form action="/follow/{{ user.username }}/" method="post">
+            {% csrf_token %}
+            <button type="submit" , name="post_id" , value="{{ post.id }}" , class="btn btn-primary btn-sm">
+               Follow
+            </button>
+        </form>
+
+
+{% for chat in user_chat %}
+
+ <li>
+             <div class="card" style="width: 30rem;">
+
+              <div class="card-body">
+                <h5 class="card-title">{{ chat.content }}  </h5>
+                <p class="card-text">{{ chat.message}}</p>
+                  <p class="card-text">{{ chat.pub_date}}  </p>
+
+
+              </div>
+            </div>
+
+             <hr>
+
+         </li>
+
+         {% endfor %}
+     </ol>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}
+

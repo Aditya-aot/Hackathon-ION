@@ -1,0 +1,74 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+
+<div class="container nav-wrapper">
+    <hr>
+
+    <h1>Register ...</h1>
+
+<hr>
+
+      
+
+
+ 
+</div>
+
+
+
+<div class="box">
+	<form action="/accounts/register" method="post">
+     {% csrf_token %}
+		<span class="text-center">Register</span>
+	<div class="input-container">
+		 <input type="text" name="first_name" required=""/> 
+		<label>First Name</label>		
+	</div>
+	<div class="input-container">		
+		<input type="text" name="last_name" required=""/>
+		<label>Last Name</label>
+	</div>
+    <div class="input-container">		
+		<input type="text" name="username" required=""/>
+		<label>UserName</label>
+	</div>
+    <div class="input-container">		
+		<input type="email" name="email" required=""/>
+		<label>Email</label>
+	</div>
+    <div class="input-container">		
+		<input type="password" name="password1" required=""/>
+		<label>Password</label>
+	</div>
+    <div class="input-container">		
+		<input type="password" name="password2" required=""/>
+		<label>Confirm&nbsp;Password</label>
+	</div>
+    
+		<input type="submit" class="btnn">
+</form>	
+</div>
+
+      <div>
+           {% for message in messages %}
+           <div class="alert alert-danger" role="alert">
+           <h3> {{message}} </h3>
+           </div>
+           {% endfor %}
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock content %}
+

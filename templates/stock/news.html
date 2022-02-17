@@ -1,0 +1,45 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+
+<div class="container nav-wrapper">
+<div class="container nav-wrapper">
+
+
+ {% for key , value in y_news.items %}
+          
+          <p>
+          <ol class="articles">
+            <li class="articles__article" style="--animation-order:1"><a class="articles__link" href="{{value.1}}"  target="_blank" >
+                <div class="articles__content articles__content--lhs">
+                  <h2 class="articles__title">{{value.0}}</h2>
+                  {{value.2}}
+                  <div class="articles__footer">
+                    <p>Cakes</p>
+                    <time>1 Jan 2020</time>
+                  </div>
+                </div>
+                <div class="articles__content articles__content--rhs" aria-hidden="true">
+                  <h2 class="articles__title">{{value.0}}</h2>
+                  {{value.2}}
+                  <div class="articles__footer">
+                    <p>Cakes</p>
+                    <time>1 Jan 2020</time>
+                  </div>
+                </div></a></li>
+                <a href="{{value.1}}" target="_blank" <button type="button" class="btn btn-dark">More Detail on News -></button> </a>
+          </p>     
+
+          </ol>
+
+{% comment %} ------------------- {% endcomment %}
+   
+  {% endfor %}
+
+</div>
+</div>
+
+ {% endblock content %}
+
+

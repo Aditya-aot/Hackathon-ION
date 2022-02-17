@@ -1,0 +1,97 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static 'styles/guide_styles.css' %} "></link>
+
+</head>
+<body>
+    
+<h1>Guide list </h1>
+
+<!-- <a href="/about">About</a> -->
+
+<div class="conatiner">
+    <div class="wrap">
+        
+        <a href="/guide/finance_guide" target="_blank">
+        <div class="box one">
+            <div class="date">
+                <h4>6/29/18</h4>
+            </div>
+            <h1>Finance Guide</h1>
+            <div class="poster p1">
+                <h4>F</h4>
+            </div>
+        </div> </a>
+        
+        <a href="/guide/stock_guide" target="_blank">
+        <div class="box two">
+            <div class="date">
+                <h4>6/29/18</h4>
+            </div>
+            <H1>Stock Market Guide</H1>
+            <div class="poster p2">
+                <h4>S</h4>
+            </div>
+        </div> 
+    </a>
+        
+        <a href="/guide/crypto_guide" target="_blank">
+        <div class="box three">
+            <div class="date">
+                <h4>6/29/18</h4>
+            </div>
+            <h1>Crypto Market</h1>
+            <div class="poster p3">
+                <h4>C</h4>
+            </div>
+        </div>
+    </a>
+        
+        <a href="/guide/real_estate_guide" target="_blank">
+        <div class="box five">
+            <div class="date">
+                <h4>6/29/18</h4>
+            </div>
+            <h1>Real Estate Guide</h1>
+            <div class="poster p4">
+                <h4>R</h4>
+            </div>
+        </div>
+    </a>
+        
+        <!-- <div class="box six">
+            <div class="date">
+                <h4>6/29/18</h4>
+            </div>
+            <h1>DESIGN</h1>
+            <div class="poster p5">
+                <h4>N</h4>
+            </div>
+        </div> -->
+        
+      
+        
+    </div>
+    </div>
+   
+ 
+
+
+
+
+</body>
+</html>
+
+
+
+{% endblock content %}
