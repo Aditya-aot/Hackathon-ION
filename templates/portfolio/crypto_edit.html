@@ -1,0 +1,72 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h1>Crypto PortFolio Edit</h1>
+
+<form action="/portfolio" method='post' >{% csrf_token %}
+  <input type="submit" value="Stock Portfolio" >
+</form>
+
+
+<form action="/portfolio/crypto/portfolio" method='post' >{% csrf_token %}
+    <input type="submit" value="--BACK" >
+</form>
+
+<form action="/portfolio/crypto/edit" method="post">{% csrf_token %}
+    {{ form }}
+   <p> <input type="submit" value="Add" class="btn btn-success" /> </p>
+ </form>
+
+
+
+ <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">NAME</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">QUANTITY</th>
+        <th scope="col">DELETE</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+ {% for crypto in all %}
+
+
+          <tr>
+            <!-- <th scope="row">1</th> -->
+            <td>{{crypto.name}}</td>
+            <td>{{crypto.price}}</td>
+            <td>{{crypto.quantity}}</td>
+            <td><form action="/portfolio/crypto/deletestock/{{crypto.id}}" method='post' >{% csrf_token %}
+                <input type="submit" value="Delete" >
+            </form></td>
+
+
+          </tr>
+
+
+{% endfor %}
+
+
+
+
+</body>
+</html>
+
+
+
+{% endblock content %}

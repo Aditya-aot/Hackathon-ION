@@ -1,0 +1,262 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/guide_styles.css' %} ">
+
+
+<h1>Crypto Currencies Guide</h1>
+<div class="tabs">
+  
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">  
+  <input type="radio" id="tab4" name="tab-control">
+  <input type="radio" id="tab5" name="tab-control">
+  <ul>
+    <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>What is Cryptocurrency</span></label></li>
+
+    <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+</svg><br><span>BlockChain</span></label></li>
+
+    <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+    <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+</svg><br><span>BitCoin</span></label></li>   
+ 
+<li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+    <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+</svg><br><span>Invest in Cryptocurrency</span></label></li>
+
+<li title="Budgeting methods"><label for="tab5" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Top Cryptocurrency</span></label></li>
+
+  </ul>
+  
+  <div class="slider"><div class="indicator"></div></div>
+  <div class="content">
+    <section>
+      <iframe width="450" height="250"
+      src="https://www.youtube.com/embed/rYQgy8QDEBI">
+      </iframe>
+
+      <h2>Features</h2>
+        <h1>  </h1>
+          <li>A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it</li>
+          <li>A cryptocurrency is a form of digital asset based on a network that is distributed across a large number of computers. This decentralized structure allows them to exist outside the control of governments and central authorities.</li>
+          <li>Experts believe that blockchain and related technology will disrupt many industries, including finance and law.</li>
+          <li>The advantages of cryptocurrencies include cheaper and faster money transfers and decentralized systems that do not collapse at a single point of failure.</li>
+          <li>The disadvantages of cryptocurrencies include their price volatility, high energy consumption for mining activities, and use in criminal activities.</li>
+      
+      <h1> Types of Cryptocurrency    </h1>
+          <li>Bitcoin is the most popular and valuable cryptocurrency. An anonymous person called Satoshi Nakamoto invented it and introduced it to the world via a white paper in 2008. There are thousands of cryptocurrencies present in the market today.</li>
+          <li>Each cryptocurrency claims to have a different function and specification. For example, Ethereum's ether markets itself as gas for the underlying smart contract platform. Ripple's XRP is used by banks to facilitate transfers between different geographies.</li>
+          <li>Bitcoin, which was made available to the public in 2009, remains the most widely traded and covered cryptocurrency. As of November 2021, there were over 18.8 million bitcoins in circulation with a total market cap of around $1.2 trillion. Only 21 million bitcoins will ever exist.3</li>
+          <li>In the wake of Bitcoin's success, many other cryptocurrencies, known as "altcoins," have been launched. Some of these are clones or forks of Bitcoin, while others are new currencies that were built from scratch. They include Solana, Litecoin, Ethereum, Cardano, and EOS. By November 2021, the aggregate value of all the cryptocurrencies in existence had reached over $2.1 trillion—Bitcoin represented approximately 41% of that total value.4</li>
+
+      <h1>Are Cryptocurrencies Legal?</h1>
+      <li>Fiat currencies derive their authority as mediums of transaction from the government or monetary authorities. For example, each dollar bill is backstopped by the Federal Reserve.</li>
+      <li>But cryptocurrencies are not backed by any public or private entities. Therefore, it has been difficult to make a case for their legal status in different financial jurisdictions throughout the world. It doesn't help matters that cryptocurrencies have largely functioned outside most existing financial infrastructure. The legal status of cryptocurrencies has implications for their use in daily transactions and trading. In June 2019, the Financial Action Task Force (FATF) recommended that wire transfers of cryptocurrencies should be subject to the requirements of its Travel Rule, which requires AML compliance.</li>
+      <li>Japan's Payment Services Act defines Bitcoin as legal property.6 Cryptocurrency exchanges operating in the country are subject to collect information about the customer and details relating to the wire transfer. China has banned cryptocurrency exchanges and mining within its borders. India was reported to be formulating a framework for cryptocurrencies in December.</li>
+
+
+
+    </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+        <section>
+          <h2>Delivery Contents</h2>
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/SSo_EIwHSd4">
+          </iframe>
+          A blockchain platform allows users and developers to create novel uses of an existing blockchain infrastructure. One example is Ethereum, which has a native cryptocurrency known as ether (ETH). But the Ethereum blockchain also allows the creation of smart contracts and programmable tokens used in initial coin offerings (ICOs), and non-fungible tokens (NFTs). These are all built up around the Ethereum infrastructure and secured by nodes on the Ethereum network.
+          <h1>   </h1>
+                <li>A database usually structures its data into tables, whereas a blockchain, like its name implies, structures its data into chunks (blocks) that are strung together. This data structure inherently makes an irreversible time line of data when implemented in a decentralized nature. When a block is filled, it is set in stone and becomes a part of this time line. Each block in the chain is given an exact time stamp when it is added to the chain.</li>
+                <li> As new data comes in, it is entered into a fresh block. Once the block is filled with data, it is chained onto the previous block, which makes the data chained together in chronological order.  </li>
+
+          <h1>How Does a Blockchain Work?</h1>
+                <li> The goal of blockchain is to allow digital information to be recorded and distributed, but not edited. In this way, a blockchain is the foundation for immutable ledgers, or records of transactions that cannot be altered, deleted, or destroyed. This is why blockchains are also known as a distributed ledger technology (DLT).  </li>
+                <li>  First proposed as a research project in 1991, the blockchain concept predated its first widespread application in use: Bitcoin, in 2009. In the years since, the use of blockchains has exploded via the creation of various cryptocurrencies, decentralized finance (DeFi) applications, non-fungible tokens (NFTs), and smart contracts. </li>
+
+
+      <h1>Blockchain Decentralization</h1>
+                <li>   Imagine that a company owns a server farm with 10,000 computers used to maintain a database holding all of its client’s account information. This company owns a warehouse building that contains all of these computers under one roof and has full control of each of these computers and all of the information contained within them. This, however, provides a single point of failure. What happens if the electricity at that location goes out? What if its Internet connection is severed? What if it burns to the ground? What if a bad actor erases everything with a single keystroke? In any case, the data is lost or corrupted.</li>
+                <li>  What a blockchain does is to allow the data held in that database to be spread out among several network nodes at various locations. This not only creates redundancy but also maintains the fidelity of the data stored therein—if somebody tries to alter a record at one instance of the database, the other nodes would not be altered and thus would prevent a bad actor from doing so. If one user tampers with Bitcoin’s record of transactions, all other nodes would cross-reference each other and easily pinpoint the node with the incorrect information. This system helps to establish an exact and transparent order of events. This way, no single node within the network can alter information held within it.                </li>
+                <li> Because of this, the information and history (such as of transactions of a cryptocurrency) are irreversible. Such a record could be a list of transactions (such as with a cryptocurrency), but it also is possible for a blockchain to hold a variety of other information like legal contracts, state identifications, or a company’s product inventory. </li>
+          
+
+      <h1>Transparency</h1>
+                <li>  Because of the decentralized nature of Bitcoin’s blockchain, all transactions can be transparently viewed by either having a personal node or using blockchain explorers that allow anyone to see transactions occurring live. Each node has its own copy of the chain that gets updated as fresh blocks are confirmed and added. This means that if you wanted to, you could track Bitcoin wherever it goes.  </li>
+                <li>  For example, exchanges have been hacked in the past, where those who kept Bitcoin on the exchange lost everything. While the hacker may be entirely anonymous, the Bitcoins that they extracted are easily traceable. If the Bitcoins stolen in some of these hacks were to be moved or spent somewhere, it would be known. </li>
+                <li>Of course, the records stored in the Bitcoin blockchain (as well as most others) are encrypted. This means that only the owner of a record can decrypt it to reveal their identity (using a public-private key pair). As a result, users of blockchains can remain anonymous while preserving transparency.  </li>
+  
+
+     <h1>Blockchain vs. Banks</h1>
+                <li>  Blockchains have been heralded as being a disruptive force to the finance sector, and especially with the functions of payments and banking. However, banks and decentralized blockchains are vastly different. </li>
+
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+        <section>
+          <h2>Shipping</h2>
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/41JCpzvnn_0">
+          </iframe>
+    <h1>  BitCoin </h1>
+          <li>  Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries. </li>
+          <li> Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network. Bitcoin is open-source; its design is public, nobody owns or controls Bitcoin and everyone can take part. Through many of its unique properties, Bitcoin allows exciting uses that could not be covered by any previous payment system. </li>
+          <li> Bitcoin is known as a type of cryptocurrency because it uses cryptography to keep it secure. There are no physical bitcoins, only balances kept on a public ledger that everyone has transparent access to (although each record is encrypted). All Bitcoin transactions are verified by a massive amount of computing power via a process known as "mining." Bitcoin is not issued or backed by any banks or governments, nor is an individual bitcoin valuable as a commodity. Despite it not being legal tender in most parts of the world, Bitcoin is very popular and has triggered the launch of hundreds of other cryptocurrencies, collectively referred to as altcoins. Bitcoin is commonly abbreviated as BTC when traded.  </li>
+          <li>Bitcoin's history as a store of value has been turbulent; it has gone through several cycles of boom and bust over its relatively short lifespan.</li>
+
+    <h1> Peer-to-Peer Technology </h1>
+          <li>  Bitcoin is one of the first digital currencies to use peer-to-peer (P2P) technology to facilitate instant payments. The independent individuals and companies who own the governing computing power and participate in the Bitcoin network—Bitcoin "miners"—are in charge of processing the transactions on the blockchain and are motivated by rewards (the release of new Bitcoin) and transaction fees paid in Bitcoin. </li>
+          <li>These miners can be thought of as the decentralized authority enforcing the credibility of the Bitcoin network. New bitcoins are released to miners at a fixed but periodically declining rate. There are only 21 million bitcoins that can be mined in total. As of November 2021, there are over 18.875 million Bitcoin in existence and less than 2.125 million Bitcoin left to mine.4</li>
+          <li>  In this way, Bitcoin and other cryptocurrencies operate differently from fiat currency; in centralized banking systems, the currency is created at a rate matching the growth of the economy; this system is intended to maintain price stability. A decentralized system, like Bitcoin, sets the release rate ahead of time and according to an algorithm. </li>
+         
+
+    <h1>  Bitcoin Mining </h1>
+          <li>   Bitcoin mining is the process by which Bitcoin is released into circulation. Generally, mining requires solving computationally difficult puzzles to discover a new block, which is added to the blockchain.</li>
+          <li>Bitcoin mining adds and verifies transaction records across the network. Miners are rewarded with some Bitcoin; the reward is halved every 210,000 blocks. The block reward was 50 new bitcoins in 2009. On May 11, 2020, the third halving occurred, bringing the reward for each block discovery down to 6.25 bitcoins.</li>
+          <li>  A variety of hardware can be used to mine Bitcoin. However, some yield higher rewards than others. Certain computer chips, called application-specific integrated circuits (ASICs), and more advanced processing units, such as graphic processing units (GPUs), can achieve more rewards. These elaborate mining processors are known as "mining rigs." </li>
+          <li>  One bitcoin is divisible to eight decimal places (100 millionths of one bitcoin), and this smallest unit is referred to as a Satoshi.6 If necessary, and if the participating miners accept the change, Bitcoin could eventually be made divisible to even more decimal places.  </li>
+
+   <h1>  Who Is Satoshi Nakamoto? </h1>
+          <li>  No one knows who invented Bitcoin, or at least not conclusively. Satoshi Nakamoto is the name associated with the person or group of people who released the original Bitcoin white paper in 2008 and worked on the original Bitcoin software that was released in 2009
+            In the years since then, many individuals have either claimed to be or been rumored to be the real-life people behind the pseudonym, but as of November 2021, the true identity (or identities) of Satoshi Nakamoto remains obscured. </li>
+          <li>  Although it is tempting to believe the media's spin that Satoshi Nakamoto is a solitary, quixotic genius who created Bitcoin out of thin air, such innovations do not typically happen in a vacuum. All major scientific discoveries, no matter how seemingly original, were built on previously existing research. </li>
+          <li> There are precursors to Bitcoin: Adam Back’s Hashcash, invented in 1997, and subsequently Wei Dai’s b-money, Nick Szabo’s bit gold, and Hal Finney’s Reusable Proof of Work. The Bitcoin white paper itself makes reference to Hashcash and b-money as well as various other works spanning several research fields. Perhaps unsurprisingly, many of the individuals behind the other projects named above have been speculated to have also had a hand in creating Bitcoin.  </li>
+
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+    <section>
+          <h2>Returns</h2>
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/FPys5vPvmVk">
+          </iframe>
+    <h1>  How To Start Investing In Cryptocurrency </h1>
+          <li> Cryptocurrencies have emerged as an asset class that provides you with a chance to invest and earn substantial returns. The asset class, has garnered massive popularity in recent years. To start trading, you will need to set up an account and you can invest as little as Rs100 to begin with.  </li>
+          <li>  Cryptocurrencies have emerged as an asset class that provides you with a chance to invest and earn substantial returns. Despite the lack of government backing, this asset class, has garnered massive popularity in recent years. The probability of handsome returns over a short period has propelled investors to jump onto the crypto bandwagon. Here are steps that will enable you to trade in these digital currencies. </li>
+
+    <h1> Select Right Crypto Exchange </h1>
+          <li> Due to the absence of crypto regulation in India, there is no fixed structure or uniformity to trading in cryptocurrency. But with the help of the crypto exchanges’ platforms, you can easily buy and sell your digital currency. WazirX, UnoCoin, CoinDCX, and CoinSwitch Kuber are popular cryptocurrency exchanges in the country.          </li>
+
+   <h1> Open a Trading Account  </h1>
+          <li>  You have to open a trading account at the Crypto exchange of your choice. This account will be similar to that in a bank. While registering, the exchange will verify your credentials based on the services you opt for, the amount you plan to invest, and the available coins trading options. It will require sharing KYC (Know Your Customer) data and setting up payment options. For KYC, you may need to submit copies of your PAN card, photo identity, and address proof.  Notably, Crypto exchanges function round the clock throughout the year, unlike regular stock exchanges. </li>
+  
+    <h1> Fund Your Account </h1>
+          <li>  After opening an account, you have to transfer some money into the crypto-trading account to buy cryptocurrencies. You may transfer the funds online from your bank account to the crypto-trading account. It, however, requires linking both accounts. Moreover, depending on the policy, you may have a waiting period before purchasing digital coins. </li>
+
+    <h1> Buying and Investing in Cryptocurrency </h1>
+          <li>  Following an account and money transfer, you need to decide on the coins you intend to invest in. By far, some of the popular ones are Bitcoin, followed by other altcoins such as Ethereum, Cardano, Binance Coin, Tether, XRP, and Dogecoin, to list a few. </li>
+
+   <h1> Store your Cryptocurrency  </h1>
+          <li>  Storage is the most important part after you make your purchases. Crypto exchanges do not have any formal institution backing them, and they most assuredly do not carry your average insurance policy. They also face the uncertainty of being hacked. Therefore, you must store your codes to your account and your assets securely. It is usually advisable to store your purchased coins in a crypto wallet. </li>
+
+    <h1> Choose a Strategy </h1>
+          <li>  Make an excellent strategy to earn more profits by adopting Elliott Wave Theory. Elliott Wave Theory concentrates on the psychology behind the market sentiment, so it acts well for speculative assets like cryptocurrencies. Moreover, you can get some crypto expert’s opinions that can be beneficial before expanding one’s investment in cryptocurrency. One should always start with small investments and study the market carefully instead of blindly following anybody’s advice. </li>
+
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+        <section>
+            <h2>Budgeting methods</h2>
+            <iframe width="450" height="250"
+            src="https://www.youtube.com/embed/rYQgy8QDEBI">
+            </iframe>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Symbol</th>
+                  <th scope="col">Market Cap</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Bitcoin</td>
+                  <td>BTC</td>
+                  <td>$712,159,580,466</td>
+                  <td>$37,592.30 </td>
+                </tr>
+               
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Ethereum</td>
+                  <td>ETH</td>
+                  <td>$306,416,933,990</td>
+                  <td>$2,561.31</td>
+                </tr>
+               
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Tether</td>
+                  <td>USDT</td>
+                  <td>$78,141,623,508 </td>
+                  <td>$1.0  </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">4</th>
+                  <td colspan="2">BNB</td>
+                  <td>BNB</td>
+                  <td>$61,736,255,966  </td>
+                  <td>$373.16 </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">5</th>
+                  <td colspan="2">USD Coin</td>
+                  <td>USDC</td>
+                  <td>$49,763,643,167  </td>
+                  <td>$0.9997 </td>
+                </tr>
+
+                <tr>
+                  <th scope="row">6</th>
+                  <td colspan="2">Cardano</td>
+                  <td>ADA</td>
+                  <td>$34,605,891,598</td>
+                  <td>$1.03</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+
+
+          </section>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock content %}

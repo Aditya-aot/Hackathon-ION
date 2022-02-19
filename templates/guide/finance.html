@@ -1,0 +1,218 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+{% load static %}
+
+<head>
+<link rel="stylesheet" href="{% static 'styles/guide_styles.css' %} ">
+</head>
+
+
+<h2>Finance Guide</h2>
+<div class="tabs">
+  
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">  
+  <input type="radio" id="tab4" name="tab-control">
+  <input type="radio" id="tab5" name="tab-control">
+  <ul>
+    <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Credit & Debit Cards</span></label></li>
+
+    <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+</svg><br><span>Saving</span></label></li>
+
+    <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+    <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+</svg><br><span>Taxes</span></label></li>   
+ 
+<li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+    <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+</svg><br><span>Homeownership</span></label></li>
+
+<li title="Budgeting methods"><label for="tab5" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Budgeting methods</span></label></li>
+
+  </ul>
+  
+  <div class="slider"><div class="indicator"></div></div>
+  <div class="content">
+    <section>
+      <h1>What Is a Credit Card? </h1><br>
+      <iframe width="450" height="250"
+        src="https://www.youtube.com/embed/T3wxogO1nYU">
+        </iframe>
+
+   
+
+      A credit card is a card issued by a financial institution, typically a bank, and it enables the cardholder to borrow funds from that institution. Cardholders agree to pay the money back with interest, according to the institution’s terms. Credit cards are issued in the following variety of categories:1
+      <li>
+      Standard cards simply extend a line of credit to their users for making purchases, balance transfers, and/or cash advances and often have no annual fee.</li>
+      <li>Premium cards offer perks such as concierge services, airport lounge access, special event access, and more, but they usually have higher annual fees.</li>
+      <li>Rewards cards offer cash back, travel points, or other benefits to customers based on how they spend.</li>
+      <li>Balance transfer cards have low introductory interest rates and fees on balance transfers from another credit card.</li>
+      <li>Secured credit cards require an initial cash deposit that is held by the issuer as collateral.</li>
+      <li>Charge cards have no preset spending limit but often don’t allow unpaid balances to carry over from month to month.
+    </li>
+
+
+ 
+    <br>
+    <h1>What Is a Debit Card? </h1><br>
+    A debit card is a payment card that makes payments by deducting money directly from a consumer’s checking account, rather than on loan from a bank. Debit cards offer the convenience of credit cards and many of the same consumer protections when issued by major payment processors such as Visa or Mastercard.7
+
+        There are two types of debit cards that do not require the customer to have a checking or savings account, as well as one standard type.
+    <li>
+      Standard debit cards draw on your bank account.</li>
+    <li>Electronic benefits transfer (EBT) cards are issued by state and federal agencies to allow qualifying users to use their benefits to make purchases.</li>
+    <li>Prepaid debit cards give people without access to a bank account a way to make electronic purchases up to the amount that was preloaded onto the card.</li>
+    
+
+
+    </section>
+
+   <!-- ########################################################################################################### -->
+        <section>
+
+          <h1>What Is a Savings? </h1><br>
+          <iframe width="450" height="250"
+            src="https://www.youtube.com/embed/HQzoZfc3GwQ">
+            </iframe>
+          <h2>Delivery Contents</h2>
+          <li>It probably doesn’t come as a surprise that saving is one of the most important components of personal finance, 
+          but most people simply aren’t doing it. In fact, data shows that just 39% of Americans could afford to pay for
+           a $1,000 emergency without taking on more debt.</li>
+
+           <li>The first saving priority most people should have is an emergency fund. Your emergency fund can help you cover any 
+          unforeseen expenses. It can also serve as an income replacement in the event that you lose your job.
+           Most experts recommend having between three and six month’s worth of expenses saved in your emergency fund.</li>
+          
+           <li>The other type of saving you might do is for specific financial goals. Whether it’s a dream vacation or the 
+          downpayment on a home, saving will help you get there.</li>
+          
+          <li>Unfortunately, there’s no magic pill or secret to saving money — you just have to do it. When it comes to saving 
+          for a big goal, the best way to reach it is to divide the total number you need to save by the number of months 
+          you’d like to have it saved. That will tell you how much to save each month to reach your goal.</li>
+        </section>
+
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+        <section>
+          <h1>What is Tax</h1>
+          <h2>Shipping</h2>
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/eOtY5Cv0Ce0">
+          </iframe>
+          A tax is a compulsory financial charge or some other type of levy imposed on a taxpayer by a governmental organization in order to fund government spending and various public expenditures. A failure to pay in a timely manner, along with evasion of or resistance to taxation, is punishable by law
+          <br>
+
+          <li>Income tax—a percentage of generated income that is relinquished to the state or federal government</li>
+          <li>Payroll tax—a percentage withheld from an employee’s pay by an employer, who pays it to the government on the employee’s behalf to fund Medicare and Social Security programs</li>
+          <li>Corporate tax—a percentage of corporate profits taken as tax by the government to fund federal programs</li>
+            <li>Sales tax—taxes levied on certain goods and services; varies by jurisdiction</li>
+              <li>Property tax—based on the value of land and property assets</li>
+          <li>ariff—taxes on imported goods; imposed with the aim of strengthening domestic businesses</li>
+            <li>Estate tax—rate applied to the fair market value (FMV) of property in a person’s estate at the time of death; the total estate must exceed thresholds set by state and federal governments</li>
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+    <section>
+      <h1>What is Homeownership</h1>
+      <iframe width="450" height="250"
+      src="https://www.youtube.com/embed/bic4qOuIJoI">
+      </iframe>
+          <h2>Returns</h2>
+          Homeownership is one of the most common goals and financial topics. After all, homeownership is just about the epitome of the American dream.
+
+          Unfortunately, a home is also incredibly expensive. According to Zillow, the average home in the United States is valued at about $276,717. And depending on where you live, the local average can easily exceed that by hundreds of thousands of dollars.
+          
+          Here are a few things to keep in mind when it comes to buying a home:
+          
+          <br>
+          <h1>Only buy what you can afford</h1>
+          A general rule of thumb is that your housing costs shouldn’t exceed about 30% of your monthly income. Unfortunately, lenders often approve borrowers for far more than that.
+          
+          No one knows your financial situation like you do — not even a lender. Be sure that the monthly payment for your home fits comfortably within your budget. And remember, your monthly costs don’t just include your principal and interest.
+          
+          You also have to account for home insurance and taxes, which can be more expensive than people realize.
+          
+          <br>
+          <h1>Save for a down payment </h1>
+          For most types of loans, you must have a down payment to buy a home. Down payments typically range from 3.5% for an FHA loan to 20% for a conventional mortgage. You don’t necessarily need 20%, but you’ll pay PMI if you put down a smaller down payment.
+          
+          There will also be other upfront costs in addition to the down payment. These include closing costs, a home inspection, and moving costs.
+
+          <br>
+          <h1>Maintain a home emergency fund </h1>
+          Maintaining a home is expensive, and experts generally recommend saving about 1% of your home’s value each year for maintenance and repairs. In addition to your personal emergency fund, it’s best to keep a separate emergency fund just for your home so you can easily afford any unexpected repairs.
+
+
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+        <section>
+          <h1>Budgeting Methods</h1>
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/-WxNLsYtNSk">
+          </iframe>
+
+            <h2>Budgeting methods</h2>
+
+            <li>Budgeting is one of the most foundational financial topics of personal finance that everyone should know. In short, budgeting is deciding how you’ll allocate all of your money. It involves figuring out exactly 
+              how much you earn each month and where it’s going to go.</li>
+
+            <li>Keep in mind that budgeting is not about perfection. It's about the review, your progress, and implementation. If you struggle initially, over time, if you 
+              stay committed, you'll get better with budgeting.</li>
+            <br>
+            
+            <h1>Budgeting methods</h1>
+            <li>There’s not necessarily one right way to budget. Instead, it’s about finding the strategy that works best for you. There are several different budgeting methods that people have had success with.
+               A few popular ones include:</li>
+            <br>
+
+      
+            <h1>50/30/20 budget</h1>
+            <li>Using this 50/30/20 percentage budgeting system, you allocate 50% of your budget to needs such as housing, insurance, and transportation. 30% of your income goes toward wants, which can be eating out, shopping, travel, and more. Finally, 20% of your income goes toward savings and debt.
+               This budgeting system is popular, but likely not ideal for people with significant debt to pay off.</li>
+             <br>
+            <h1>Zero-based budget</h1>
+            <li>Using the zero-based budgeting method, you plan your spending by taking your total monthly income and allocating it to budget categories until you have $0. The premise of this system is that you find a job for every single dollar, 
+              even if that job is savings or debt payoff.</li>
+            <br>
+            <h1>Pay yourself first </h1>
+            <li>The pay-yourself-first budgeting method is also known as reverse budgeting. Using this method, you figure out how much you want to pay yourself each month, meaning how much you want to put toward your savings and debt goals. From there, 
+              you can spend whatever is left.</li>
+            <br>
+            <h1>Envelope system </h1>
+            <li>The envelope system can be used in conjunction with any other type of budget. Using this strategy, you have an envelope for each spending category. In each envelope is the cash available to spend for the current month. When the envelope is empty,
+               you’re done spending in that category for the month.</li>
+            <br>
+            <h1>Budgeting apps </h1>
+            <li>There are many budgeting apps on the market to help you plan your spending and track your expenses throughout the month. 
+              Some of the most popular budgeting apps on the market include:</li>
+            <br>
+            Mint ,
+            You Need a Budget ,
+            Personal Capital ,
+            EveryDollar 
+
+
+          </section>
+
+  </div>
+</div>
+
+
+
+
+
+{% endblock content %}

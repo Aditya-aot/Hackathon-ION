@@ -1,0 +1,209 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/guide_styles.css' %} ">
+
+
+
+<h1>Real Estate Guide</h1>
+<div class="tabs">
+  
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">  
+  <input type="radio" id="tab4" name="tab-control">
+  <input type="radio" id="tab5" name="tab-control">
+  <ul>
+    <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Real Estate </span></label></li>
+
+    <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+</svg><br><span>Different ways to invest </span></label></li>
+
+    <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+    <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+</svg><br><span>Owning rental property</span></label></li>   
+ 
+<li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+    <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+</svg><br><span>Homeownership</span></label></li>
+
+<li title="Budgeting methods"><label for="tab5" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Buying REITs</span></label></li>
+
+  </ul>
+  
+  <div class="slider"><div class="indicator"></div></div>
+  <div class="content">
+    <section>
+
+      <iframe width="450" height="250"
+      src="https://www.youtube.com/embed/rq48nm-vOV0">
+      </iframe>
+
+      <h2>Delivery Contents</h2>
+      <h1>   </h1>
+      <li>  Real estate is property consisting of land and the buildings on it, along with its natural resources such as crops, minerals or water; immovable property of this nature; an interest vested in this an item of real property, buildings or housing in general. </li>
+      <li>  Real estate is the land along with any permanent improvements attached to the land, whether natural or man-made—including water, trees, minerals, buildings, homes, fences, and bridges. Real estate is a form of real property. It differs from personal property, which are things not permanently attached to the land, such as vehicles, boats, jewelry, furniture, and farm equipment. </li>
+      <li>  There are five main categories of real estate: residential, commercial, industrial, raw land, and special use. </li>
+      <li>   You can invest in real estate directly by purchasing a home, rental property or other property, or indirectly through a real estate investment trust (REIT). </li>
+
+      <h1> Physical Characteristics of Real Estate   </h1>
+        <li> Immobility. While some parts of land are removable and the topography can be altered, the geographic location of any parcel of land can never be changed. </li>
+        <li>  Indestructibility. Land is durable and indestructible (permanent).</li>
+        <li> Uniqueness. No two parcels of land can be exactly the same. Even though they may share similarities, every parcel differs geographically. </li>
+
+      <h1> Economic Characteristics of Real Estate </h1>
+        <li> Improvements: Any additions or changes to the land or a building that affects the property's value is called an improvement. Improvements of a private nature (such as homes and fences) are referred to as improvements on the land. Improvements of a public nature (e.g., sidewalks and sewer systems) are called improvements to the land. </li>
+        <li> Permanence of investment: Once land is improved, the total capital and labor used to build the improvement represent a sizable fixed investment. Even though a building can be razed, improvements like drainage, electricity, water, and sewer systems tend to be permanent because they can't be removed (or replaced) economically. </li>
+        <li> Scarcity: While land isn't considered rare, the total supply is fixed. </li>
+        <li> Location or area preference. Location refers to people's choices and tastes regarding a given area, based on factors like convenience, reputation, and history. Location is one of the most important economic characteristics of land (thus the saying, "location, location, location!"). </li>
+
+  
+    </section>
+
+        <section>
+
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/2wY-hVTbT58">
+          </iframe>
+
+          <h2>Delivery Contents</h2>
+          <h1>  Ways to Invest in Real Estate </h1>
+          <li>Buying and owning real estate is an investment strategy that can be both satisfying and lucrative. Unlike stock and bond investors, prospective real estate owners can use leverage to buy a property by paying a portion of the total cost upfront, then paying off the balance, plus interest, over time.          </li>
+          <li>  While a traditional mortgage generally requires a 20% to 25% down payment, in some cases a 5% down payment is all it takes to purchase an entire property. This ability to control the asset the moment papers are signed emboldens both real estate flippers and landlords, who can, in turn, take out second mortgages on their homes in order to make down payments on additional properties. Here are five key ways investors can make money on real estate. </li>
+          <li>  Aspiring real estate owners can buy a property using leverage, paying a portion of its total cost upfront, then paying off the balance over time. </li>
+
+   <h1>  Rental Properties  </h1>
+          <li>  Owning rental properties can be a great opportunity for individuals with do-it-yourself (DIY) and renovation skills, and have the patience to manage tenants. However, this strategy does require substantial capital to finance up-front maintenance costs and to cover vacant months. </li>
+          <li> According to U.S. Census Bureau data, sales prices of new homes (a rough indicator for real estate values) consistently increased in value from 1940 to 2006, before dipping during the financial crisis. Subsequently, sales prices resumed their ascent, even surpassing pre-crisis levels It remains to be seen what the longterm effects of the coronavirus pandemic will be on real estate values.  </li>
+
+   <h1> Real Estate Investment Groups (REIGs)  </h1>
+          <li>  Real estate investment groups (REIGs) are ideal for people who want to own rental real estate without the hassles of running it. Investing in REIGs requires a capital cushion and access to financing. </li>
+          <li>REIGs are like small mutual funds that invest in rental properties. In a typical real estate investment group, a company buys or builds a set of apartment blocks or condos, then allows investors to purchase them through the company, thereby joining the group.</li>
+            <li>A single investor can own one or multiple units of self-contained living space, but the company operating the investment group collectively manages all of the units, handling maintenance, advertising vacancies, and interviewing tenants. In exchange for conducting these management tasks, the company takes a percentage of the monthly rent.</li>
+          <li> A standard real estate investment group lease is in the investor’s name, and all of the units pool a portion of the rent to guard against occasional vacancies. To this end, you'll receive some income even if your unit is empty. As long as the vacancy rate for the pooled units doesn’t spike too high, there should be enough to cover costs </li>
+  
+   <h1>  House Flipping </h1>
+          <li>  House flipping is for people with significant experience in real estate valuation, marketing, and renovation. House flipping requires capital and the ability to do, or oversee, repairs as needed. </li>
+          <li>  This is the proverbial "wild side" of real estate investing. Just as day trading is different from buy-and-hold investors, real estate flippers are distinct from buy-and-rent landlords. Case in point—real estate flippers often look to profitably sell the undervalued properties they buy in less than six months. </li>
+          <li> Pure property flippers often don't invest in improving properties. Therefore, the investment must already have the intrinsic value needed to turn a profit without any alterations, or they'll eliminate the property from contention.  </li>
+          <li>  Flippers who are unable to swiftly unload a property may find themselves in trouble because they typically don’t keep enough uncommitted cash on hand to pay the mortgage on a property over the long term. This can lead to continued, snowballing losses. </li>
+
+   <h1>  Real Estate Investment Trusts (REITs) </h1>
+          <li>  A real estate investment trust (REIT) is best for investors who want portfolio exposure to real estate without a traditional real estate transaction. </li>
+          <li>  A REIT is created when a corporation (or trust) uses investors’ money to purchase and operate income properties. REITs are bought and sold on the major exchanges, like any other stock          </li>
+          <li>  A corporation must payout 90% of its taxable profits in the form of dividends in order to maintain its REIT status. By doing this, REITs avoid paying corporate income tax, whereas a regular company would be taxed on its profits and then have to decide whether or not to distribute its after-tax profits as dividends </li>
+          <li> Like regular dividend-paying stocks, REITs are a solid investment for stock market investors who desire regular income. In comparison to the aforementioned types of real estate investment, REITs afford investors entry into nonresidential investments, such as malls or office buildings, that are generally not feasible for individual investors to purchase directly.  </li>
+
+        
+        </section>
+
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+        <section>
+       
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/sM_DcT9ejdY">
+          </iframe>
+    
+          <h2>Delivery Contents</h2>
+          <h1>  Owning rental property </h1>
+          <li> Thinking about purchasing an investment property? Real estate has produced many of the world's wealthiest people, so there are plenty of reasons to think that it is a sound investment. Experts agree, however, that as with any investment, it's better to be well-versed before diving in with hundreds of thousands of dollars. Here are the factors and challenges you should consider before buying your first rental property.  </li>
+          <li>  Being a landlord requires a broad array of skills, from understanding basic tenant law to fixing a leaky faucet.  </li>
+    
+    
+     <h1> Decide If You're Cut Out to Be a Landlord  </h1>
+          <li> Being a landlord can be a good way to earn real estate income, but it's not easy or glamorous. In addition to choosing the right property, prepping the unit, and finding reliable tenants, there are always maintenance hassles and headaches.  </li>
+          <li> Do you know your way around a toolbox? How are you at repairing drywall or unclogging a toilet? Sure, you could call somebody to do it for you or you could hire a property manager, but that will eat into your profits. Property owners who have one or two homes often do their own repairs to save money.  </li>
+          <li>  Of course, that changes as you add more properties to your portfolio. Lawrence Pereira, president of King Harbor Wealth Management in Redondo Beach, Calif., lives on the West Coast but owns properties on the East Coast. As someone who says he's not at all handy, he makes it work. How? "I put together a solid team of cleaners, handymen, and contractors," says Pereira </li>
+    
+    
+     <h1> Pay Down Personal Debt  </h1>
+          <li>Savvy investors might carry debt as part of their portfolio investment strategy, but the average person should avoid it. If you have student loans, unpaid medical bills, or children who will attend college soon, purchasing a rental property may not be the right move for now.   </li>
+          <li> Pereira agrees that being cautious is key, saying, "It's not necessary to pay down debt if your return from your real estate is greater than the cost of debt. That is the calculation you need to make." Pereira suggests having a cash cushion. "Don't put yourself in a position where you lack the cash to make payments on your debt. Always have a margin of safety.  </li>
+          <li>Secure a 20% (or Larger) Down Payment
+            Investment properties generally require a larger down payment than owner-occupied properties do; they have more stringent approval requirements. The 3% you may have put down on the home where you currently live isn't going to work for an investment property. You will need at least a 20% down payment, given that mortgage insurance isn't available on rental properties. You may, however, be able to obtain the down payment through bank financing, such as a personal loan.               </li>
+
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+    <section>
+     
+         <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/g5bDXoew3a0">
+          </iframe>
+
+          <h2>Delivery Contents</h2>
+    <h1>   </h1>
+          <li>  Whether you've done it before or not, the challenge of buying a home can be incredibly daunting. It's tempting to either just go with the first place that falls in your price range or continue to rent. To help you demystify the process and get the most out of this purchase, let's examine what you'll need to consider before you buy, what you can expect from the buying process itself, and some handy tips to make life easier after you move into your home. </li>
+          <li> Before you begin home-hunting, ask yourself what sort of residence best suits your needs and wants, how much home you can actually afford, how much financing you can get, and who will help you in your search.  </li>
+
+    <h1> Considerations Before You Buy  </h1>
+          <li> The first thing you'll need to determine is what your long-term goals are. Then, consider how home ownership fits in with those plans. Some folks are simply looking to transform all those "wasted" rent payments into mortgage payments that actually lead to owning something tangible—equity, baby! Others see homeownership as a sign of their independence and enjoy the idea of being their own landlord. Then, there's the issue of thinking of buying a home as an investment.  </li>
+
+
+    <h1>  What Type of Home Best Suits Your Needs? </h1>
+          <li>  You have several options when purchasing a residential property: a traditional single-family home, a townhouse, a condominium, a co-operative, or a multi-family building with two to four units. Each option has its pros and cons, depending on your homeownership goals. </li>
+          <li>  It's up to you to decide which type of property will help you reach those goals. You can also save on the purchase price in any category by choosing a fixer-upper (although the amount of time, sweat equity, and money involved to turn a fixer-upper into your dream home might be much more than you bargained for). </li>
+        
+    <h1>Find a Home</h1>
+          <li>  Make sure to take advantage of all the available options for finding homes on the market, including using your real estate agent, searching for listings online, and driving around the neighborhoods that interest you in search of for-sale signs. Also, put some feelers out there with your friends, family, and business contacts. You never know where a good reference or lead on a home might come from. </li>
+          <li> Once you're seriously shopping for a home, don't walk into an open house without having an agent (or at least being prepared to throw out the name of someone you're supposedly working with). You can see how it might not work in your best interest to start dealing with a seller's agent before contacting one of your own.  </li>
+          <LI>If you're on a budget, look for homes whose full potential has yet to be realized. Even if you can't afford to replace the hideous wallpaper in the bathroom now, it might be worth it to live with the ugliness for a while in exchange for getting into a house you can afford. If the home otherwise meets your needs (in terms of the big things that are difficult to change), such as location and size, don't let physical imperfections turn you away. </LI>
+
+    <h1>  Obtain a Home Inspection  </h1>
+          <li>  Even if the home you plan to purchase appears to be flawless, there's no substitute for having a trained professional inspect your potential new home for the quality, safety, and overall condition. If the home inspection reveals serious defects that the seller did not disclose, you'll generally be able to rescind your offer and get your deposit back. Negotiating to have the seller make the repairs or discount the selling price are other options if you find yourself in this situation. </li>
+          
+    
+    </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+
+        <section>
+       
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/yDl1_uLR5Os">
+          </iframe>
+
+          <h2>Delivery Contents</h2>
+          <h1>  How To Invest In REITs </h1>
+          <li> accumulate at least 100 shareholders within its first year of being recognized as an REIT. not have more than 50.0% of its shares held by five or fewer individuals during the last six months of a taxable period. invest at least 75.0% of its total assets between real estate and cash.  </li>
+          <li>  REIT investing isn’t all that different from trading on the stock market. Real estate investment trusts are molded after the same mutual funds most people are familiar with. The money spent on shares is used by the respective REIT to invest in the assets they choose. While investors are contributing the money, the REIT is actually deciding what to do with it. More importantly, REITs award investors the opportunity to take advantage of this historically prosperous real estate market without having to take out a loan </li>
+          <li>  Real estate investment trusts allow investors to invest in real estate without actually buying physical assets. They grant access to the companies which invest in real estate. Not to paint with a broad brush, but all investors need to do is sign up with a brokerage, mind due diligence, and invest wisely. There is more minutia that must be taken into consideration, but that’s the gist of it. </li>
+  
+
+          <h1> What Are The Requirements To Become An REIT?  </h1>
+          <li>  Several criteria distinguish REITs from other stocks traded on Wall Street. Real estate investment trusts must have the majority of their assets tied to real estate investments. Unlike their traditional real estate counterparts, REITs are required to distribute at least 90.0% of their taxable income to shareholders annually in the form of dividends.          </li>
+          <li> Real estate investment trusts have limited growth potential due to their dividend requirements. However, the distribution of profits is not without its own benefit. Qualifying REITs are permitted to deduct all dividends they pay out each year from their corporate taxable income. This significantly reduces their taxable obligations.  </li>
+
+          <h1> REIT Dividends And Tax Implications </h1>
+          <li> The dividends received from investing in REITs can turn into a powerful wealth-building vehicle. Done correctly, there’s no reason investors couldn’t supplement their entire income with annual dividend payments. However, there are tax implications which can’t be ignored. Dividends are viewed as income, and Uncle Sam will want his cut at tax time.  </li>
+          <li>  Individual shareholders who receive dividend payments must report their profits to the Internal Revenue Service (IRS). With a few exceptions, dividends received over the course of the year are treated as ordinary income and will be subject to income tax. However, Matt Frankel at Millionacres suggests there is a great way to simultaneously compound profits and shelter dividends from taxes. </li>
+        
+        
+        </section>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}
