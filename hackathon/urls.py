@@ -19,6 +19,7 @@ from stock import views
 from portfolio import views
 from guide import views
 from accounts import views 
+from chat import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('portfolio', include('portfolio.urls')) ,
     path('guide', include('guide.urls')) ,
     path('accounts', include('accounts.urls')) ,
+    path('chat', include('chat.urls')) ,
 ]

@@ -10,6 +10,10 @@
     <title>Document</title>
 </head>
 <body>
+
+
+  {% if user.is_authenticated %}
+
     <h1> Stock PortFolio</h1>
     <form action="/portfolio/edit" method='post' >{% csrf_token %}
         <input type="submit" value="EDIT" >
@@ -58,9 +62,13 @@
 
 
 
+        {% else %}
+        <form action="/accounts/login" method='post' >{% csrf_token %}
+          <input type="submit" value="EDIT" >
+      </form>
+  
 
-
-
+        {% endif %}
 </body>
 </html>
 

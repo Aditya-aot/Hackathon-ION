@@ -7,7 +7,7 @@
 
          <div class="container nav-wrapper">
          {% if user.is_authenticated %}
-            <form action="/chat/" method="post">{% csrf_token %}
+            <form action="/chat" method="post">{% csrf_token %}
             {{form}}
     <!--                      {{form.as_p}}-->
     <!--            <input type="text" id="fname" name="fname" value={{user.username}}><br><br>-->

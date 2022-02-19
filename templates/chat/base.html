@@ -11,7 +11,7 @@
    
 {% comment %}  {% endcomment %}
  <script src="{% static 'styles/main1.js' %}" defer ></script> 
-    <link rel="stylesheet" href="{% static 'styles/styles5.css' %} ">
+    <link rel="stylesheet" href="{% static 'styles/chat_styles.css' %} ">
     
 
 {% comment %}  {% endcomment %}
@@ -39,8 +39,11 @@
           <nav>
             <a href="/"><div class="logo"></div></a>
             <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="/chart">Chart</a></li>
+              <li><a href="/predict">Predict </a></li>
+              <!-- <li><a href="/home">Home</a></li>
+              <li><a href="/chart">Chart</a></li> -->
+              <li><a href="/guide">Guide</a></li>
+              <li><a href="/portfolio/view">Portfolio</a></li>
               <li><a href="/news">News</a></li>
               <li><a href="/chat">Discuss</a></li>
               <li><a href="/about">About</a></li>
@@ -51,7 +54,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><a class="dropdown-item" href="#" >HI &nbsp; <b>{{ user.first_name}}</b></a></li> <br>
-                      <li><a class="dropdown-item" href="/account/logout" >Logout</a></li>
+                      <li><a class="dropdown-item" href="/accounts/logout" >Logout</a></li>
                       <li><hr class="dropdown-divider"></li>
                      
                     </ul>
@@ -72,8 +75,11 @@
                       <nav>
             <a href="/"><div class="logo"></div></a>
             <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="/chart">Chart</a></li>
+              <li><a href="/predict">Predict </a></li>
+              <!-- <li><a href="/home">Home</a></li>
+              <li><a href="/chart">Chart</a></li> -->
+              <li><a href="/guide">Guide</a></li>
+              <li><a href="/portfolio/view">Portfolio</a></li>
               <li><a href="/news">News</a></li>
               <li><a href="/chat">Discuss</a></li>
               <li><a href="/about">About</a></li>
@@ -83,8 +89,8 @@
                       <adi>More ▼</adi>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="/account/login" >Login</a></li>
-                      <li><a class="dropdown-item" href="/account/register/" >Register</a></li>
+                      <li><a class="dropdown-item" href="/accounts/login" >Login</a></li>
+                      <li><a class="dropdown-item" href="/accounts/register" >Register</a></li>
                       <li><hr class="dropdown-divider"></li>
                       {% comment %} <li><a class="dropdown-item" href="#">Something else here</a></li> {% endcomment %}
                     </ul>
@@ -105,7 +111,7 @@
 {% comment %} ----------------------------------------------------------------------------------- {% endcomment %}
 {% comment %} ----------------------------------------------------------------------------------- {% endcomment %}
 
-
+<!-- 
                    {% if user.is_authenticated %}
 
                         <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
@@ -168,7 +174,7 @@
                         </nav>
 
                          </div>
-                        {% endif %}
+                        {% endif %} -->
 {% block content %}
 
 

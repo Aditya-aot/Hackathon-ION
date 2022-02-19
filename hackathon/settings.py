@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'portfolio',
     'guide' ,
     'accounts' ,
+    'chat' ,
 ]
 
 MIDDLEWARE = [
