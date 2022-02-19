@@ -183,7 +183,7 @@ def edit_crypto_portfolio_views(request) :
 
     username = request.user
     # user_chat = model_crypto.filter(user__username__iexact = username)
-    user_chat = crypto_port.objects.get(user = username)
+    user_chat = model_crypto.filter(user = username)
     
 
     context = {'form':form ,
