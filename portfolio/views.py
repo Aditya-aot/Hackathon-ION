@@ -32,7 +32,8 @@ def portfolio_views(request) :
 
     model_stock = stock_port.objects.all()
     username = request.user
-    user_chat = model_stock.filter(user__username__iexact = username)
+    # user_chat = model_stock.filter(user__username__iexact = username)
+    user_chat = model_stock.filter(user = username)
 
 
     for i in user_chat :
@@ -86,7 +87,8 @@ def portfolio_edit_views(request) :
     
     # username = request.GET.get('username')
     username = request.user
-    user_chat = model_stock.filter(user__username__iexact = username)
+    # user_chat = model_stock.filter(user__username__iexact = username)
+    user_chat = model_stock.filter(user = username)
     context = {'form': form ,
                 'all' : user_chat[::-1] ,
                 }
