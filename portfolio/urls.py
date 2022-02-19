@@ -4,6 +4,7 @@ from . import views
 
 
 urlpatterns = [
+    path('/view', views.stock_or_bit , name='stock_or_bit') ,
     path('', views.portfolio_views , name='portfolio_views') ,
     path('/edit', views.portfolio_edit_views , name='portfolio_edit_views') ,
     path('/deletestock/<int:stock_id>', views.delete_portfolio_edit_views,name='delete_portfolio_edit_views'),

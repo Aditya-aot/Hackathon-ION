@@ -1,11 +1,20 @@
 from http.client import HTTPResponse
+from urllib import request
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from .models import stock_port , crypto_port
 from .forms import stock_port_form  , crypto_port_form
+from django.contrib.auth.models import  User, auth
 
 import yfinance as yf
 # Create your views here.
+
+def stock_or_bit(request) :
+    context = {
+                }
+
+    return render(request, 'portfolio/stock_or_bit.html', context)
+
 
 
 def portfolio_views(request) :
@@ -22,8 +31,11 @@ def portfolio_views(request) :
 
 
     model_stock = stock_port.objects.all()
+    username = request.user
+    user_chat = model_stock.filter(user__username__iexact = username)
 
-    for i in model_stock :
+
+    for i in user_chat :
         name_list.append(i.name)
         price_list.append(i.price)
         quantity_list.append(i.quantity)
@@ -52,7 +64,7 @@ def portfolio_views(request) :
         
     # stock_dict=list(reversed(sorted(stock_dict.items() )))
     print(total_current_price)
-    context = {'all' : model_stock[::-1] ,
+    context = {'all' : user_chat[::-1] ,
                 "stock_dict":stock_dict ,
                 #  "stock_dict":
                 }
@@ -67,10 +79,16 @@ def portfolio_edit_views(request) :
     if request.method == 'POST':
         form = stock_port_form(request.POST) 
         if form.is_valid() :
-            form.save()
-
+            # form.save()
+            obj = form.save(commit=False)
+            obj.user = request.user or None
+            obj.save()
+    
+    # username = request.GET.get('username')
+    username = request.user
+    user_chat = model_stock.filter(user__username__iexact = username)
     context = {'form': form ,
-                'all' : model_stock[::-1] ,
+                'all' : user_chat[::-1] ,
                 }
 
     return render(request, 'portfolio/stock_edit.html', context)
@@ -158,10 +176,17 @@ def edit_crypto_portfolio_views(request) :
     if request.method == 'POST' :
         form = crypto_port_form(request.POST)
         if form.is_valid() :
-            form.save()
+            # form.save()
+            obj = form.save(commit=False)
+            obj.user = request.user or None
+            obj.save()
+
+    username = request.user
+    user_chat = model_crypto.filter(user__username__iexact = username)
+    
 
     context = {'form':form ,
-                'all' : model_crypto[::-1]
+                'all' : user_chat[::-1]
                 }
 
     return render(request, 'portfolio/crypto_edit.html', context)

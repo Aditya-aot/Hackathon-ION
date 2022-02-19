@@ -9,7 +9,11 @@ class stock_port_form(ModelForm) :
 
     class Meta:
         model = stock_port
-        fields = '__all__'
+        fields = [
+            'name' ,
+            'price',
+             'quantity'
+        ]
 
 
 from bs4 import BeautifulSoup
@@ -40,4 +44,8 @@ class crypto_port_form(ModelForm) :
 
     class Meta:
         model = crypto_port
-        fields = '__all__'
+        fields = [
+            'name' ,
+            'price',
+             'quantity'
+        ]
