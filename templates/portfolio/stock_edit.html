@@ -1,0 +1,68 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Stock PortFolio</h1>
+
+
+    <form action="/portfolio" method='post' >{% csrf_token %}
+        <input type="submit" value="--BACK" >
+    </form>
+
+
+    <form action="/portfolio/edit" method="post">{% csrf_token %}
+        {{ form }}
+       <p> <input type="submit" value="Add" class="btn btn-success" /> </p>
+     </form>
+
+
+     <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <!-- <th scope="col">#</th> -->
+            <th scope="col">NAME</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">QUANTITY</th>
+            <th scope="col">DELETE</th>
+            <th scope="col">EDIT</th>
+          </tr>
+        </thead>
+        <tbody>
+
+     {% for stock in all %}
+
+ 
+              <tr>
+                <!-- <th scope="row">1</th> -->
+                <td>{{stock.name}}</td>
+                <td>{{stock.price}}</td>
+                <td>{{stock.quantity}}</td>
+
+                <td><form action="/portfolio/deletestock/{{stock.id}}" method='post' >{% csrf_token %}
+                    <input type="submit" value="Delete" >
+                </form></td>
+
+                <td><form action="/portfolio/update_portfolio/{{stock.id}}" method='post' >{% csrf_token %}
+                  <input type="submit" value="Edit" >
+              </form></td>
+
+
+              </tr>
+
+
+    {% endfor %}
+
+
+</body>
+</html>
+
+
+{% endblock content %}

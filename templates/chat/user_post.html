@@ -1,0 +1,54 @@
+
+
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+<hr>
+<div class="container nav-wrapper">
+{% if user.is_authenticated %}
+<ol>
+
+       <div class="alert alert-primary" role="alert">
+  {{user.username}}
+</div>
+{% for chat in user_chat %}
+ <li>
+             <div class="card" style="width: 30rem;">
+
+              <div class="card-body">
+
+                <h5 class="card-title">{{ chat.content }}  </h5>
+                <p class="card-text">{{ chat.message}}</p>
+                  <p class="card-text">{{ chat.pub_date}}  </p>
+                        <form action="/deleteChat/{{chat.id}}/"
+                         style="display: inline;"
+                         method="post">{% csrf_token %}
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                         </form>
+                             <form action="/update_chat/{{chat.id}}/"
+                             style="display: inline;"
+                              method="post">{% csrf_token %}
+                             <input type="submit" value="Update" class="btn btn-warning">
+                             </form>
+
+
+
+              </div>
+            </div>
+
+             <hr>
+
+         </li>
+         {% endfor %}
+     </ol>
+     {% else %}
+                 <a class="btn btn-warning" data-toggle="collapse" href="/accounts/login/" role="button" aria-expanded="false" aria-controls="/accounts/login/">
+                <h4>  You need to Login </h4>
+                   </a>
+          {% endif %}
+</div>
+
+
+
+{% endblock content %}

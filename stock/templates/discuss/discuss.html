@@ -1,0 +1,21 @@
+
+
+{% extends 'stock/base.html'%}
+{% block content %}
+aditya
+<br>
+---------
+{% comment %} {{form2}} {% endcomment %}
+<br>
+---------
+
+        <form action="/discuss1/{{stock}}/" method="post">{% csrf_token %}
+            {{form2}} <br>
+            <button class='btn btn-primary'><span>Submit </span></button>
+        </form>
+  aa-->> {{stock}}
+   
+
+
+{% endblock content %}
+

@@ -1,0 +1,209 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/guide_styles.css' %} ">
+
+
+
+<h2>Stock Market Guide</h2>
+<div class="tabs">
+  
+  <input type="radio" id="tab1" name="tab-control" checked>
+  <input type="radio" id="tab2" name="tab-control">
+  <input type="radio" id="tab3" name="tab-control">  
+  <input type="radio" id="tab4" name="tab-control">
+  <input type="radio" id="tab5" name="tab-control">
+  <ul>
+    <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Stock Market</span></label></li>
+
+    <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24"><path d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+</svg><br><span>Trading or Investing</span></label></li>
+
+    <li title="Shipping"><label for="tab3" role="button"><svg viewBox="0 0 24 24">
+    <path d="M3,4A2,2 0 0,0 1,6V17H3A3,3 0 0,0 6,20A3,3 0 0,0 9,17H15A3,3 0 0,0 18,20A3,3 0 0,0 21,17H23V12L20,8H17V4M10,6L14,10L10,14V11H4V9H10M17,9.5H19.5L21.47,12H17M6,15.5A1.5,1.5 0 0,1 7.5,17A1.5,1.5 0 0,1 6,18.5A1.5,1.5 0 0,1 4.5,17A1.5,1.5 0 0,1 6,15.5M18,15.5A1.5,1.5 0 0,1 19.5,17A1.5,1.5 0 0,1 18,18.5A1.5,1.5 0 0,1 16.5,17A1.5,1.5 0 0,1 18,15.5Z" />
+</svg><br><span>Shares or Mutual Funds</span></label></li>   
+ 
+<li title="Returns"><label for="tab4" role="button"><svg viewBox="0 0 24 24">
+    <path d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+</svg><br><span>Start Analyzing Yourself</span></label></li>
+
+<li title="Budgeting methods"><label for="tab5" role="button"><svg viewBox="0 0 24 24"><path d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z"/>
+</svg><br><span>Diversify and Reduce Risks</span></label></li>
+
+  </ul>
+  
+  <div class="slider"><div class="indicator"></div></div>
+  <div class="content">
+    <section>
+      <h2>Features</h2>
+      <iframe width="450" height="250"
+      src="https://www.youtube.com/embed/p7HKvqRI_Bo">
+      </iframe>
+
+      A stock market, equity market, or share market is the aggregation of buyers and sellers of stocks, which represent ownership claims on businesses; these may include securities listed on a public stock 
+
+      <h1>KEY TAKEAWAYS </h1>
+
+            <li>Stock markets are venues where buyers and sellers meet to exchange equity shares of public corporations.</li>
+          <li>Stock markets are vital components of a free-market economy because they enable democratized access to trading and exchange of capital for investors of all kinds.</li>
+            <li>They perform several functions in markets, including efficient price discovery and efficient dealing.</li>
+          <li> In the United States, the stock market is regulated by the Securities and Exchange Commission (SEC) and local regulatory bodies.</li>
+    
+    <H1>How the Stock Market Works</H1>
+          In a nutshell, stock markets provide a secure and regulated environment where market participants can transact in shares and other eligible financial instruments with confidence, with zero to low operational risk. Operating under the defined rules as stated by the regulator, the stock markets act as primary markets and secondary markets.3
+
+          <h1>Special Considerations</h1>
+          <li>The stock exchange shoulders the responsibility of ensuring price transparency, liquidity, price discovery, and fair dealings in such trading activities. As almost all major stock markets across the globe now operate electronically, the exchange maintains trading systems that efficiently manage the buy and sell orders from various market participants. They perform the price-matching function to facilitate trade execution at a price that is fair to both buyers and sellers.</li>
+          
+          <li>A listed company may also offer new, additional shares through other offerings at a later stage, such as through rights issues or follow-on offerings. They may even buy back or delist their shares. The stock exchange facilitates such transactions. </li>
+
+    <h1>Balanced Regulation</h1>
+            Listed companies are largely regulated, and their dealings are monitored by market regulators, such as the above-mentioned SEC. Additionally, exchanges mandate certain requirements—for example, timely filing of quarterly financial reports and instant reporting of any relevant developments—to ensure that all market participants become aware of corporate happenings. Failure to adhere to the regulations can lead to suspension of trading by the exchanges and other disciplinary measures.
+
+    </section>
+
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+        <section>
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/dmqoqVwFopE">
+          </iframe>
+          <h1>KEY TAKEAWAYS</h1>
+                  <li>  Investing takes a long-term approach to the markets and often applies to such purposes as retirement accounts.</li>
+                  <li>  Trading involves short-term strategies to maximize returns daily, monthly, or quarterly.</li>
+                  <li> Investors are more likely to ride out short-term losses, while traders will attempt to make transactions that can help them profit quickly from fluctuating markets. </li>
+                  
+          <h1>Investing</h1>
+                  <li>The goal of investing is to gradually build wealth over an extended period of time through the buying and holding of a portfolio of stocks, baskets of stocks, mutual funds, bonds, and other investment instruments.</li>
+                  
+                  <li>Investors often enhance their profits through compounding or reinvesting any profits and dividends into additional shares of stock.</li>
+                  <li>Investments often are held for a period of years, or even decades, taking advantage of perks like interest, dividends, and stock splits along the way. While markets inevitably fluctuate, investors will "ride out" the downtrends with the expectation that prices will rebound and any losses eventually will be recovered. Investors typically are more concerned with market fundamentals, such as price-to-earnings ratios and management forecasts.</li>
+                  
+                  <li> Anyone who has a 401(k) or an IRA is investing, even if they are not tracking the performance of their holdings on a daily basis. Since the goal is to grow a retirement account over the course of decades, the day-to-day fluctuations of different mutual funds are less important than consistent growth over an extended period.</li>
+      
+            <h1>Trading</h1>
+                  <li>Trading involves more frequent transactions, such as the buying and selling of stocks, commodities, currency pairs, or other instruments. The goal is to generate returns that outperform buy-and-hold investing. While investors may be content with annual returns of 10% to 15%, traders might seek a 10% return each month. Trading profits are generated by buying at a lower price and selling at a higher price within a relatively short period of time. The reverse also is true: trading profits can be made by selling at a higher price and buying to cover at a lower price (known as "selling short") to profit in falling markets.</li>
+                  
+                  <li> While buy-and-hold investors wait out less profitable positions, traders seek to make profits within a specified period of time and often use a protective stop-loss order to automatically close out losing positions at a predetermined price level. Traders often employ technical analysis tools, such as moving averages and stochastic oscillators, to find high-probability trading setups.</li>
+                  <li>A trader's style refers to the timeframe or holding period in which stocks, commodities, or other trading instruments are bought and sold. Traders generally fall into one of four categories:  </li>
+                 <li>  Position Trader: Positions are held from months to years.  </li> 
+                 <li>   Swing Trader: Positions are held from days to weeks. </li> 
+                 <li>   Day Trader: Positions are held throughout the day only with no overnight positions. </li> 
+                 <li>   Scalp Trader: Positions are held for seconds to minutes with no overnight positions. </li> 
+      
+      </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+        <section>
+          <h2>Shipping</h2>
+          
+          <iframe width="450" height="250"
+          src="https://www.youtube.com/embed/k9ztQtPFWqc">
+          </iframe>
+          Investing can be complicated and very overwhelming. After all, there are so many different options out there, from stocks and bonds to real estate and money market accounts. Whatever you choose, there's no guarantee that you'll make money from your investments. But there is a way to take advantage of the opportunities available in the market by pooling your money into one vehicle: A mutual fund. You can certainly build wealth by investing in stocks, but it may be safer to invest in a mutual fund instead. So why should you seriously choose putting your money into mutual funds over stocks? Read on to find out some of the most common advantages that come with investing in mutual funds.
+          <h1> Mutual Funds </h1>
+                  <li>Mutual funds pool money together from a group of investors and invest that capital into different securities such as stocks, bonds, money market accounts, and others. Funds have different investment objectives, to which their portfolios are tailored. Money managers are responsible for each fund. They generate income for investors by allocating assets within the fund.</li>
+                  <li> Mutual funds can hold many different securities, which makes them very attractive investment options. Among the reasons why an individual may choose to buy mutual funds instead of individual stocks are diversification, convenience, and lower costs. </li>
+                  <li> Ask any investment professional, and they'll likely tell you that one of the most important ways to reduce your risk is through diversification. It's a lesson most people learned after the financial crisis. The underlying theme here is that you shouldn't put all your eggs in one basket. So don't just invest in one industry or one type of investment vehicle. </li>
+                  <li>The convenience of mutual funds is surely one of the main reasons investors choose them to provide the equity portion of their portfolio, rather than buying individual shares themselves. Some investors find that buying a few shares of a mutual fund that meets their basic investment criteria easier than finding out what the companies the fund invests in actually do, and if they are good quality investments. They'd prefer to leave the research and decision-making up to someone else.</li>
+                  <li>  The costs of frequent stock trades can add up quickly for individual investors. Gains made from the stock's price appreciation can be canceled out by the costs of completing a single sale of an investor's shares of a given company. Investors who make a lot of trades should take a look at our list of brokers who charge lower-than-average fees.</li>
+                  <li>  </li>
+
+          <h1> Shares </h1>
+                  <li>Shares represent a part of a company’s value. When a company wants its shares to be traded in stock markets, it offers an Initial Public Offering (IPO). The total value of its shares represents the total value of the company. This means that if you own shares of a company, then you are a part-owner of the company.  </li>
+                  <li>  You are directly responsible for the choice of stocks. You can choose to trade or exit from the stocks as per your choice.</li>
+                  <li>  No option for fixed investment as prices fluctuate regularly. You have to monitor the prices constantly.</li>
+                  <li>  Best suited for people having expertise in stock markets.</li>
+                  <li>  Investment in mutual funds or shares depends on your knowledge and expertise in stock markets. You can choose mutual funds if you want a slow and steady avenue for wealth creation. But if you want higher returns, and are willing to trade with close attention to stock market fundamentals, then you must choose investment in stocks. If you want to trade in stocks, then do remember to choose a trusted financial partner who can provide you with free online Demat Account, a single trading platform, and best stock recommendations.</li>
+                
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+    <section>
+          <h2>Returns</h2>
+    
+    
+            <h2>Budgeting methods</h2>
+            <iframe width="450" height="250"
+            src="https://www.youtube.com/embed/KiZwKdTWg18">
+            </iframe>
+            <h1> SET GOALS BEFORE INVESTING </h1>
+                    <li> Goal-based investing can help you to work towards achieving your financial goals. Assess your financial needs and set your short-term and long-term goals accordingly. This will help you to identify the duration of your investment, the target amount, and the investment avenue most suitable for your needs. Say, your investment horizon is short. Then you could attempt to gain from short-term fluctuations in stock prices. On the other hand, should you have a longer timeframe, you could invest in blue-chip stocks, as they are known to bring good returns in the long run. </li>
+  
+            <h1> UNDERSTAND SHARE MARKET BASICS </h1>
+                    <li> Before you invest your hard-earned money in the stock market, get familiar with the basics. Learn how the stock market functions, what drives the market, what influences stock prices, trading and investing strategies, and more. You will also need to get acquainted with the many technical terminologies to make informed investments. Investors who jump in without understanding the basics could end up losing their money. If you want good and consistent returns, learn about the market before starting your share market journey. </li>
+            <h1> RESEARCH AND CONDUCT DUE DILIGENCE </h1>
+                    <li>Investors sometimes do not research the company they wish to invest in. Some do this because they lack the time or do not want to make the effort. Others may not know how to do the research. But conducting fundamental research and technical analysis are crucial steps for stock market investors. They can help you to book profits and avoid losses. So, how should you research a company before investing? Start by reading the company’s financial reports, assessing the competency of the board of directors, and looking into independent research on the company and its sector. This will help you to understand the future growth prospects of the company before investing.</li>
+  
+            <h1> SELECT FUNDAMENTALLY STRONG COMPANIES </h1>
+                    <li> You should consider investing in companies with strong fundamentals. Such companies not only provide enhanced returns in the long run but also ensure greater liquidity to investors. Fundamentally strong companies also have the potential to withstand share market volatility and fluctuations. Thus, they are a relatively safe avenue for investment. Mutual fund investors could also look into large-cap mutual funds.  </li>
+            <h1> DO NOT BUY BASED ON RUMOURS  </h1>
+                    <li> One thing you should strictly avoid in the stock market is investing based on rumours. Do not simply purchase a stock simply because everyone is investing in it. Even if a friend or relative suggests the stock, don’t follow their advice blindly. Conduct proper research into the stock before investing. Analyse the performance of the company and its growth prospects. Always remember, good stocks offer good returns. Click here for a quick guide to investing. </li>
+  
+            <h1> DEFINE PROFIT TARGETS </h1>
+                    <li> Since the stock market is unpredictable and volatile, no one can correctly time market movements. Therefore, it is advisable that you determine your exit prices before investing in a particular stock. Once your profit target is reached, close your positions and book profits. It is often a bad idea to be greedy and wait for higher returns. The stock price could move against you at any time, which may lead to losses. </li>
+    
+            <h1> INVEST THROUGH RELIABLE INTERMEDIARIES </h1>
+                    <li> To invest in the stock market, you have to open demat and trading accounts. You may find many brokers offering these services in the market, but it is advisable to invest through reputed and reliable intermediaries. You will then gain access to secure trading platforms, several value-added services, timely research reports, and share market tips. Choose an intermediary that offers responsive customer care so that your issues are resolved quickly and efficiently. </li>
+
+            <h1>  AVOID RISKY LOW-PRICED STOCKS   </h1>
+                    <li>Low-priced stocks, also known as penny stocks, attract investors because they seem like bargains. A given amount of capital will fetch you a much larger number of those low-priced shares. But such stocks often carry huge risks. Remember, a stock’s price does not provide any indication of how well it is likely to do. Instead, you should study its fundamentals before investing. Check its financial statements, debt–equity ratio, recent earnings reports, and other details. This will give you an idea of whether the company is stable or on the brink of collapse. Click here for tips on how to identify undervalued stocks.     </li>
+    
+    
+    
+
+
+        </section>
+
+<!-- ########################################################################################################### -->
+<!-- ########################################################################################################### -->
+
+        <section>
+            <h2>Budgeting methods</h2>
+            <iframe width="450" height="250"
+            src="https://www.youtube.com/embed/Pmlsa5-ruMk">
+            </iframe>
+            <h1>  </h1>
+                    <li> Diversification is a technique that reduces risk by allocating investments across various financial instruments, industries, and other categories. It aims to maximize returns by investing in different areas that would each react differently to the same event. </li>
+                    <li>  Most investment professionals agree that, although it does not guarantee against loss, diversification is the most important component of reaching long-range financial goals while minimizing risk. Here, we look at why this is true and how to accomplish diversification in your portfolio.</li>
+                    <li>Diversification reduces risk by investing in vehicles that span different financial instruments, industries, and other categories.</li>
+            
+            <h1> Understanding Diversification in Investing </h1>
+                    <li> Let's say you have a portfolio that only has airline stocks. Share prices will drop following any bad news, such as an indefinite pilot strike that will ultimately cancel flights. This means your portfolio will experience a noticeable drop in value. </li>
+                    <li> You can counterbalance these stocks with a few railway stocks, so only part of your portfolio will be affected. In fact, there is a very good chance that these stock prices will rise, as passengers look for alternative modes of transportation. </li>
+                    <li> You could diversify even further because of the risks associated with these companies. That's because anything that affects travel will hurt both industries. Statisticians may say that rail and air stocks have a strong correlation. This means you should diversify across the board—different industries as well as different types of companies. The more uncorrelated your stocks are, the better. </li>
+
+            <h1>How Many Stocks You Should Have</h1>
+                    <li>Obviously, owning five stocks is better than owning one, but there comes a point when adding more stocks to your portfolio ceases to make a difference. There is a debate over how many stocks are needed to reduce risk while maintaining a high return. The most conventional view argues that an investor can achieve optimal diversification with only 15 to 20 stocks spread across various industries.</li>
+                    
+            <h1>Different Types of Risk</h1>
+                    <li> Investors confront two main types of risk when they invest. The first is known as systematic or market risk. This type of risk is associated with every company. Common causes include inflation rates, exchange rates, political instability, war, and interest rates. This category of risk is not specific to any company or industry, and it cannot be eliminated or reduced through diversification. It is a form of risk that all investors must accept. </li>
+                    <li>The second type of risk is diversifiable or unsystematic. This risk is specific to a company, industry, market, economy, or country. The most common sources of unsystematic risk are business risk and financial risk. Because it is diversifiable, investors can reduce their exposure through diversification. Thus, the aim is to invest in various assets so they will not all be affected the same way by market events.  </li>
+                   
+            <h1>  Problems with Diversification </h1>
+                    <li>Professionals are always touting the importance of diversification but there are some downsides to this strategy. First, it may be somewhat cumbersome managing a diverse portfolio, especially if you have multiple holdings and investments.  </li>
+                    <li> Diversification can also be expensive. Not all investment vehicles cost the same, so buying and selling will affect your bottom line—from transaction fees to brokerage charges. And since higher risk comes with higher rewards, you may end up limiting your returns. </li>
+                    <li>Next, consider how complicated it can be. For instance, many synthetic investment products have been created to accommodate investors' risk tolerance levels. These products are often complex and aren't meant for beginners or small investors. Those with limited investment experience and financial backing should consider purchasing bonds to diversify against stock market risk.</li>
+    
+          </section>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}

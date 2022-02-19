@@ -1,0 +1,77 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+  {% if user.is_authenticated %}
+
+    <h1> Stock PortFolio</h1>
+    <form action="/portfolio/edit" method='post' >{% csrf_token %}
+        <input type="submit" value="EDIT" >
+    </form>
+
+    <form action="/portfolio/crypto/edit" method='post' >{% csrf_token %}
+      <input type="submit" value="Crypto Portfolio" >
+  </form>
+
+
+
+
+<br>
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">NAME</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">QUANTITY</th>
+        <th scope="col"> Current Price</th>
+        <th scope="col"> Total Current Price</th>
+        <th scope="col"> Total Spent </th>
+        <th scope="col"> Proft & Loss</th>
+
+      </tr>
+    </thead>
+        {% for key, values in stock_dict.items %}
+        
+            <!-- {{key}} -->
+
+            <tbody>
+                <tr>
+                  <!-- <th scope="row">.</th> -->
+                  <td>{{values.0}}</td>
+                  <td>{{values.1}}</td>
+                  <td>{{values.2}}</td>
+                  <td>{{values.3}}</td>
+                  <td>{{values.4}}</td>
+                  <td>{{values.5}}</td>
+                  <td>{{values.6}}</td>
+                </tr>
+
+        {% endfor %}
+    
+
+
+
+        {% else %}
+        <form action="/accounts/login" method='post' >{% csrf_token %}
+          <input type="submit" value="EDIT" >
+      </form>
+  
+
+        {% endif %}
+</body>
+</html>
+
+
+
+{% endblock content %}

@@ -1,0 +1,158 @@
+{% extends 'stock/base.html'%}
+{% block content %}
+
+
+
+
+
+
+<form action="/account/register/">{% csrf_token %}
+   <button class="btn btn-primary"  > REGISTER NOW </button>
+</form>
+
+
+<div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Stock Guide</a></li>
+        <li class="date">{{day}}</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Stock</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">Predict</a></li>
+            <li><a href="#">Python</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Predict Stock Price </h1>
+      <h2>of any DAY</h2>
+      <p> By just entering Symbol and date you can Predict the Stock of that symbol , which incldes Open , High , Low , Close , Volume , Dividends , Stock Splits </p>
+      <p class="read-more">
+        <a href="/home"> <button class="btn btn-primary"  > TRY NOW </button> </a>
+      </p>
+    </div>
+  </div>
+
+<br>
+
+
+  <div class="blog-card alt">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Stock Guide</a></li>
+        <li class="date">{{day}}</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Stock</a></li>
+            <li><a href="#">Chart</a></li>
+            <li><a href="#">up to 500 days</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Predict Graph of STOCK Flow</h1>
+      <h2>you can predict up to 500 days</h2>
+      <p> By the help of Machine Learning you can predict the Stock Flow from day 10 to 500 , you just need to enter Symbol and the date you want to predict in Graph , you can see all information like Open , High , Low , Close . </p>
+      <p class="read-more">
+         <a href="/chart"> <button class="btn btn-primary"  > TRY NOW </button> </a>
+      </p>
+    </div>
+  </div>
+
+  <br>
+<div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://media.istockphoto.com/photos/business-newspaper-on-wooden-desk-with-glasses-and-coffee-cup-daily-picture-id1135318298?k=20&m=1135318298&s=170667a&w=0&h=RJKpIuShXVV5nJxsdUbo6Fgks1bEdOgXlH3j0ZPumGA=)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Stock Guide</a></li>
+        <li class="date">{{day}}</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Stock</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Yahoo Finance</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Stock News  </h1>
+      <h2>top latest news</h2>
+      <p> Get top latest news of stock and Business from all over the WORLD , from Yahoo Finance  </p>
+      <p class="read-more">
+        <a href="/news"> <button class="btn btn-primary"  > TRY NOW </button> </a>
+      </p>
+    </div>
+  </div>
+
+
+<br>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://media.istockphoto.com/photos/business-meeting-picture-id950643698?k=20&m=950643698&s=612x612&w=0&h=CKpO5YfgmMBa_dYOmUbT2R_0_s_esju-kV96lF3-osQ=)"></div>
+    <ul class="details">
+      <li class="author"><a href="#">Stock Guide</a></li>
+      <li class="date">{{day}}</li>
+      <li class="tags">
+        <ul>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Management</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Real Data</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description">
+    <h1>Portfolio </h1>
+    <h2>check your Management</h2>
+    <p> A stock portfolio is a collection of stocks that you invest in with the hope of making a profit. By putting together a diverse portfolio that spans various sectors you're able to become a more resilient investor. </p>
+    <p class="read-more">
+      <a href="/portfolio"> <button class="btn btn-primary"  > TRY NOW </button> </a>
+    </p>
+  </div>
+</div>
+<br>
+
+
+  <div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://www.ringcentral.co.uk/gb/en/blog/wp-content/uploads/2021/05/happy-manager-leads-a-meeting-in-the-office-640x427.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Stock Guide</a></li>
+        <li class="date">{{day}}</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Stock</a></li>
+            <li><a href="#">Chart</a></li>
+            <li><a href="#">up to 500 days</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Discuss About Stock </h1>
+      <h2>Share your Thoughts</h2>
+      <p> Share your Thoughts on diffrent stock , which stock to buy or when to buy and if you are new to stock than , you get others help from the Discuss and ask any qeutions you like  </p>
+      <p class="read-more">
+         <a href="/chat"> <button class="btn btn-primary"  > TRY NOW </button> </a>
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+{% endblock content %}
+
+
