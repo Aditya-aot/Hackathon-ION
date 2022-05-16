@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'guide' ,
     'accounts' ,
     'chat' ,
+    'django_extensions', # below is to make graph for sql lite
+   
 ]
 
 MIDDLEWARE = [
@@ -150,3 +152,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 STATICFILES_STORAGE = 'whitenoise.storange.CompressedManifestStorage'
 django_heroku.settings(locals())
+
+# ############## below is to make graph for sql lite
+#  py manage.py graph_models --pydot -a -g -o my_project_visualized.png
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+########################################
