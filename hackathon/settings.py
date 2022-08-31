@@ -15,7 +15,7 @@ from pathlib import Path
 import os
 
 # Heroku 
-import django_heroku
+# import django_heroku
 import dj_database_url
 from decouple import config
 # heroku
