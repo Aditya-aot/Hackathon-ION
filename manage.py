@@ -1,15 +1,9 @@
-# port change
-from django.core.management.commands.runserver import Command as runserver
-# port change
+
 
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
-# port change
-# runserver.default_port = int("0.0.0.0:5000") 
-# port change
 
 def main():
     """Run administrative tasks."""
