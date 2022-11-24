@@ -149,6 +149,10 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+# for vercel
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build', 'static')
+# for vercel
+
 
 STATICFILES_STORAGE = 'whitenoise.storange.CompressedManifestStorage'
 django_heroku.settings(locals())
