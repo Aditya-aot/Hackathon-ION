@@ -5,7 +5,7 @@
         {
             "src" : "hackathon/wsgi.py" ,
             "use" : "@vercel/python" ,
-            "config" : { "maxiambdaSize": "15mb", "runtime":"python3.9"}
+            "config" : { "maxLambdaSize": "15mb", "runtime":"python3.9"}
     
         } ,
 
