@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-052yr178@=dfeei#!#kmeaoj8&)7_#9l%ljir5ezu4f0_yvd&s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','web-production-f96e.up.railway.app','127.0.0.1','finance-guide.herokuapp.com']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','0.0.0.0','web-production-f96e.up.railway.app','127.0.0.1','finance-guide.herokuapp.com']
 
 
 # Application definition
@@ -135,7 +135,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-
 STATIC_URL = '/static/'
 
 # Default primary key field type
@@ -152,7 +151,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
 
 STATICFILES_STORAGE = 'whitenoise.storange.CompressedManifestStorage'
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 # ############## below is to make graph for sql lite
 #  py manage.py graph_models --pydot -a -g -o my_project_visualized.png
